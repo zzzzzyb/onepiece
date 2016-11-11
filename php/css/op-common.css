@@ -1,0 +1,315 @@
+@charset "utf-8";
+/*2016、4、7 By  zzzzzzyb*/
+
+/*End hide from IE-mac*/
+/*等待页样式*/
+
+#op-wait {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgb(30, 30, 31);
+}
+
+.wait-container {
+    position: absolute;
+    width: 90%;
+    top: 0;
+    bottom: 0;
+    margin-left: 5%;
+}
+
+.wait-container .wait-loading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-top: -64px;
+    margin-left: -64px;
+    height: 128px;
+    width: 128px;
+    -webkit-animation: loading 3s linear 0s infinite;
+    -o-animation: loading 3s linear 0s infinite;
+    animation: loading 3s linear 0s infinite;
+}
+
+.wait-container .loaderfont {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    margin-left: -3em;
+    font-family: "Comic Sans MS", sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    overflow: hidden;
+}
+
+.loaderfont span {
+    -moz-animation: loadingfont 1s linear infinite -0.8s;
+    -webkit-animation: loadingfont 1s linear infinite -0.8s;
+    animation: loadingfont 1s linear infinite -0.8s;
+    float: left;
+}
+
+.loaderfont .span2 {
+    -moz-animation: loadingfont 1s linear infinite -0.2s;
+    -webkit-animation: loadingfont 1s linear infinite -0.2s;
+    animation: loadingfont 1s linear infinite -0.2s;
+}
+
+.loaderfont .span3 {
+    -moz-animation: loadingfont 1s linear infinite -0.5s;
+    -webkit-animation: loadingfont 1s linear infinite -0.5s;
+    animation: loadingfont 1s linear infinite -0.5s;
+}
+
+.loaderfont .span4 {
+    -moz-animation: loadingfont 1s linear infinite -1.1s;
+    -webkit-animation: loadingfont 1s linear infinite -1.1s;
+    animation: loadingfont 1s linear infinite -1.1s;
+}
+
+.loaderfont .span5 {
+    -moz-animation: loadingfont 1s linear infinite -0.36s;
+    -webkit-animation: loadingfont 1s linear infinite -0.36s;
+    animation: loadingfont 1s linear infinite -0.36s;
+}
+
+.loaderfont .span6 {
+    -moz-animation: loadingfont 1s linear infinite -0.65s;
+    -webkit-animation: loadingfont 1s linear infinite -0.65s;
+    animation: loadingfont 1s linear infinite -0.65s;
+}
+
+.loaderfont .span7 {
+    -moz-animation: loadingfont 1s linear infinite -0.93s;
+    -webkit-animation: loadingfont 1s linear infinite -0.93s;
+    animation: loadingfont 1s linear infinite -0.93s;
+}
+
+.loaderfont .span8 {
+    -moz-animation: loadingfont 1s linear infinite -0.13s;
+    -webkit-animation: loadingfont 1s linear infinite -0.13s;
+    animation: loadingfont 1s linear infinite -0.13s;
+}
+
+.loaderfont .span9 {
+    -moz-animation: loadingfont 1s linear infinite -0.43s;
+    -webkit-animation: loadingfont 1s linear infinite -0.43s;
+    animation: loadingfont 1s linear infinite -0.43s;
+}
+
+/*导航栏*/
+#common-container{
+    min-width: 1280px;
+    width: 80%;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+}
+.common-nav {
+    width: 80%;
+    min-width: 1180px;
+    height: 120px;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+}
+.common-nav ul{
+    list-style: none;
+    height: 100%;
+    text-align: center;
+    vertical-align: bottom;
+}
+.common-nav li{
+    position: absolute;
+}
+.common-nav .nav-character,.common-nav .nav-story,.common-nav .nav-peripheral,.common-nav .nav-about{
+    bottom: 0;
+    width: 221px;
+    height: auto;
+    -webkit-transition: bottom 1s;
+    -moz-transition: bottom 1s;
+    -ms-transition: bottom 1s;
+    -o-transition: bottom 1s;
+    transition: bottom 1s;
+}
+.common-nav .nav-character:hover,.common-nav .nav-story:hover,.common-nav .nav-peripheral:hover,.common-nav .nav-about:hover{
+    bottom: -20px;
+
+}
+.common-nav .nav-character{
+    left: 0;
+}
+.common-nav .nav-story{
+    left: 241px;
+}
+.common-nav .nav-peripheral{
+    right: 241px;
+}
+.common-nav .nav-about{
+    right: 0;
+}
+.common-nav .nav-index{
+    left: 50%;
+    margin-left: -150px;
+}
+.common-nav a{
+    display: block;
+    height: 100%;
+    vertical-align: bottom;
+}
+.common-nav img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.common-nav .nav-index{
+    width: 300px;
+    height: auto;
+    position: relative;
+    z-index: 998;
+}
+.common-nav .nav-index:hover{
+    -webkit-animation: indexover 2s;
+    -o-animation: indexover 2s;
+    animation: indexover 2s;
+}
+/*闪光效果*/
+.light{
+    cursor:pointer;
+    position: absolute;
+    left: -100px;
+    top: 30px;
+    z-index: 0;
+    width: 300px;
+    height: 120px;/* 根据图像高度自行修改 */
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+    transform: skewx(-25deg);
+    -o-transform: skewx(-25deg);
+    -moz-transform: skewx(-25deg);
+    -webkit-transform: skewx(-25deg);
+    opacity: 0;
+}
+.nav-index:hover .light{
+    opacity: 1;
+    left:350px;/* 根据图像宽度自行修改 */
+    -moz-transition:0.5s;
+    -o-transition:0.5s;
+    -webkit-transition:0.5s;
+    transition:0.5s;
+    /*-webkit-border-radius: 50%;*/
+    /*-moz-border-radius: 50%;*/
+    /*border-radius: 50%;*/
+}
+/*脚部*/
+.op-footer {
+    margin: 20px 0;
+    background-color: rgba(8, 8, 8, 0.44);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-image: url(../images/bg/footer-bg.png);
+    background-position: 90% bottom;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+}
+
+.op-footer-link {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.op-footer-link ul {
+    list-style: none;
+}
+
+.op-footer-link li {
+    width: 200px;
+    height: 70px;
+    float: left;
+    margin: 1em;
+}
+
+.op-footer-link img {
+    height: 100%;
+    width: 100%;
+}
+
+.op-footer-link img:hover {
+    opacity: .5;
+    -webkit-transform: scale(.9);
+    -moz-transform: scale(.9);
+    -ms-transform: scale(.9);
+    -o-transform: scale(.9);
+    transform: scale(.9);
+}
+
+.op-footer-web {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+}
+
+.op-footer-web img {
+    float: left;
+}
+
+.op-footer-web span {
+    float: left;
+    line-height: 86px;
+}
+
+#gotop {
+    position: fixed;
+    right: 10px;
+    bottom: 80px;
+    z-index: 997;
+    width: 90px;
+    height: 120px;
+    background-image: url(../images/icon/gotop.png);
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-animation: gotop 2s ease 0s infinite alternate;
+    -o-animation: gotop 2s ease 0s infinite alternate;
+    animation: gotop 2s ease 0s infinite alternate;
+    opacity: 0;
+}
+#gotop.show{
+    opacity: 1;
+}
+/*页面滚动条样式*/
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,1); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,255,255,1); 
+}
